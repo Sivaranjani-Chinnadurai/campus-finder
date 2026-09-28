@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)];
+  }
+  
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-md border border-white/60 shadow-sm rounded-3xl hover:bg-white/90 hover:shadow-md transition-all duration-300;
+  }
+  
+  .glass-input {
+    @apply bg-white/50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-100 text-slate-800 placeholder-slate-400 transition-all shadow-sm;
+  }
+  
+  .glass-button {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 shadow-[0_4px_14px_0_rgba(37,99,235,0.25)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.2)];
+  }
+}
+
+body {
+  /* Bright, soft, and professional background */
+  background: radial-gradient(circle at 15% 50%, #f0f9ff 0%, transparent 50%),
+              radial-gradient(circle at 85% 30%, #e0e7ff 0%, transparent 50%),
+              radial-gradient(circle at 50% 80%, #f8fafc 0%, transparent 50%);
+  background-color: #f1f5f9;
+  background-attachment: fixed;
+  color: #0f172a;
+}
